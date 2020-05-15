@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+
 	file = fopen(argv[1], "r");
 	if (!file)
 	{
@@ -23,8 +24,6 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	/*printf("%s", argv[1]);*/
-	get_content(file);
-
+	parsefile(file);
 	return (EXIT_SUCCESS);
 }
