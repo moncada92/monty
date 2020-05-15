@@ -8,7 +8,7 @@
  * Return: pointer to the matching function
  */
 
-void (*get_op_func (line_t line, FILE *file))(stack_t **, unsigned int)
+void (*get_op_func (line_t line, FILE *file))(stack_toy_t **, unsigned int)
 {
 	unsigned int i = 0;
 

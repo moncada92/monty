@@ -25,6 +25,7 @@ bool opcode_check(line_t line)
 bool argument_check(char *token)
 {
 	unsigned int i;
+	printf("token: %s \n", token);
 
 	if (!token)
 		return (false);
@@ -53,6 +54,7 @@ bool argument_check(char *token)
 */
 void push_check(line_t line, char *opcode, FILE *file)
 {
+	printf("%s \n", argument_check(line.content[1]));
 	if ((strcmp(opcode, "push") == 0) && !argument_check(line.content[1]))
 	{
 		free(line.content);

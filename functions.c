@@ -6,9 +6,9 @@
  *
  * Return: Nothing.
  */
-void push(stack_t **stack, unsigned int nline)
+void push(stack_toy_t **stack, unsigned int nline)
 {
-	stack_t *new;
+	stack_toy_t *new;
 
 	if (stack == NULL)
 	{
@@ -16,7 +16,7 @@ void push(stack_t **stack, unsigned int nline)
 		exit(EXIT_FAILURE);
 	}
 
-	new = malloc(sizeof(stack_t));
+	new = malloc(sizeof(stack_toy_t));
 	if (new == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
@@ -39,9 +39,9 @@ void push(stack_t **stack, unsigned int nline)
  *
  * Return: Nothing.
  */
-void pall(stack_t **stack, unsigned int nline)
+void pall(stack_toy_t **stack, unsigned int nline)
 {
-	stack_t *temp;
+	stack_toy_t *temp;
 	(void)nline;
 
 	temp = *stack;
@@ -58,9 +58,9 @@ void pall(stack_t **stack, unsigned int nline)
  *
  * Return: Nothing.
  */
-void free_stack(stack_t **stack)
+void free_stack(stack_toy_t **stack)
 {
-	stack_t *temp = NULL;
+	stack_toy_t *temp = NULL;
 
 	if (stack == NULL || *stack == NULL)
 		return;
@@ -79,7 +79,7 @@ void free_stack(stack_t **stack)
  * @nline: the line number
  * Return: Nothing.
  */
-void nop(stack_t **stack, unsigned int nline)
+void nop(stack_toy_t **stack, unsigned int nline)
 {
 	(void)stack;
 	(void)nline;

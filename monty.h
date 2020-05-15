@@ -9,7 +9,7 @@
 #include <ctype.h>
 #include <signal.h>
 
-extern int argint;
+int argint;
 
 /**
  * struct f_line - contents of line and corresponding number
@@ -38,7 +38,7 @@ typedef struct stack_s
 	int n;
 	struct stack_s *prev;
 	struct stack_s *next;
-} stack_t;
+} stack_toy_t;
 
 /**
  * struct store_s - doubly linked list representation of a stack (or queue)
@@ -49,7 +49,7 @@ typedef struct stack_s
  */
 typedef struct store_s
 {
-	stack_t *stack;
+	stack_toy_t *stack;
 } store_t; 
 
 /**
@@ -63,18 +63,18 @@ typedef struct store_s
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
+	void (*f)(stack_toy_t **stack, unsigned int line_number);
 } instruction_t;
 
 void get_content(FILE *file);
 void format_line(char *buffer, line_t *line);
 
-void push(stack_t **stack, unsigned int nline);
-void pall(stack_t **stack, unsigned int nline);
-void free_stack(stack_t **stack);
+void push(stack_toy_t **stack, unsigned int nline);
+void pall(stack_toy_t **stack, unsigned int nline);
+void free_stack(stack_toy_t **stack);
 
 
-void (*get_op_func(line_t line, FILE *file))(stack_t **, unsigned int);
+void (*get_op_func(line_t line, FILE *file))(stack_toy_t **, unsigned int);
 
 bool opcode_check(line_t line);
 bool argument_check(char *token);
