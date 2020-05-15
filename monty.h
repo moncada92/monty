@@ -106,5 +106,6 @@ void nop(stack_t **stack, unsigned int nline);
 void free_stack(stack_t **stack);
 void nop(stack_t **stack, unsigned int nline);
 void qpush(stack_t **stack, unsigned int nline);
+void addop(stack_t **stack, unsigned int nline);
 
 #endif /* MONTY_H */

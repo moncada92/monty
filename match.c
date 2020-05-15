@@ -17,6 +17,7 @@ void (*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
+		{"add", addop},
 		{NULL, NULL}
 	};
 
