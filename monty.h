@@ -10,17 +10,6 @@
 #include <signal.h>
 
 extern int argint;
-/**
- * struct store_s - doubly linked list representation of a stack (or queue)
- * @stack: content linked list
- *
- * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO Holberton project
- */
-typedef struct store_s
-{
-	stack_t *stack;
-} store_t;
 
 /**
  * struct f_line - contents of line and corresponding number
@@ -50,6 +39,18 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
+
+/**
+ * struct store_s - doubly linked list representation of a stack (or queue)
+ * @stack: content linked list
+ *
+ * Description: doubly linked list node structure
+ * for stack, queues, LIFO, FIFO Holberton project
+ */
+typedef struct store_s
+{
+	stack_t *stack;
+} store_t; 
 
 /**
  * struct instruction_s - opcode and its function
