@@ -52,7 +52,7 @@ void get_content(FILE *file)
 
 	buffer = malloc(sizeof(char *) * l);
 
-    sotre_st = malloc(sizeof(store_t));
+	sotre_st = malloc(sizeof(store_t));
 	if (!sotre_st)
 	{
 		fprintf(stderr, "Error: malloc failed");
